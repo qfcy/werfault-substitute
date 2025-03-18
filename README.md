@@ -1,6 +1,7 @@
 **The English documentation is placed below the Chinese version.**  
 
-自从Windows 10开始，Windows自带的WerFault.exe不再有图形界面，使得Windows应用崩溃时用户难以获知，必须查看系统日志才能看到崩溃记录。  
+在Windows中，当应用崩溃（如发生段错误）时，系统会自动调用WerFault.exe，进行错误处理。  
+但自从Windows 10开始，Windows自带的WerFault.exe不再有图形界面，使得Windows应用崩溃时用户难以获知，必须查看系统日志才能看到崩溃记录。  
 这是Windows内置WerFault.exe系统文件的替换版本，支持应用崩溃时显示界面，并提示创建转储，使得处理应用崩溃更便捷。  
 效果图：
 
