@@ -24,7 +24,8 @@ build
 
 ---
 
-Since Windows 10, the built-in WerFault.exe in Windows no longer has a graphical interface, making it difficult for users to be aware of application crashes. They must check the system logs to see crash records.  
+In Windows, when an application crashes (such as due to a segmentation fault), the system automatically invokes WerFault.exe to handle the error.  
+However, the built-in WerFault.exe in Windows no longer has a graphical interface since Windows 10, making it difficult for users to be aware of application crashes. They must check the system logs to see crash records.  
 This is a replacement version of the built-in WerFault.exe system file in Windows, which supports displaying an interface when an application crashes and prompts the creation of a dump, making it more convenient to handle application crashes.  
 Screenshot:
 
