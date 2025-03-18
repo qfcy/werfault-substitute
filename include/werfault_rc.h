@@ -1,0 +1,22 @@
+#pragma once
+#include <windows.h>
+
+#define IDD_MAIN_DIALOG 100
+#define IDS_TEXT_TITLE 101
+#define IDS_TEXT_CMDLINE 102
+
+#define IDC_TEXT_TITLE 1001
+#define IDC_TEXT_CMDLINE 1002
+#define IDC_GROUP 1005
+#define IDC_FULL_DUMP 1006
+#define IDC_MINI_DUMP 1007
+#define ID_DEBUGGER 1008
+
+// 实际字体大小
+#define DIALOG_FONTSIZE 12
+
+const int DIALOG_ELEMENTS[] = {
+    IDC_TEXT_TITLE,IDC_TEXT_CMDLINE,IDOK,IDCANCEL,
+    IDC_GROUP,IDC_FULL_DUMP,IDC_MINI_DUMP,ID_DEBUGGER,
+    0, // 哨兵
+};

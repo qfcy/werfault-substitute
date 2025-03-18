@@ -1,0 +1,27 @@
+#include <windows.h>
+#include "werfault_rc.h"
+
+IDD_MAIN_DIALOG DIALOGEX 0, 0, 200, 125
+STYLE DS_SHELLFONT | DS_MODALFRAME | WS_VISIBLE | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
+CAPTION "WerFault.exe"
+FONT 10, "MS Sans Serif"
+BEGIN
+    LTEXT           IDS_TEXT_TITLE, IDC_TEXT_TITLE, 10, 5, 200, 20, WS_VISIBLE
+    LTEXT           IDS_TEXT_CMDLINE, IDC_TEXT_CMDLINE, 10, 25, 200, 16, WS_VISIBLE
+    GROUPBOX        "Create Dump", IDC_GROUP, 10, 45, 180, 55
+    CONTROL         "Full Dump",IDC_FULL_DUMP,"Button",BS_AUTORADIOBUTTON, 20, 55, 80, 15
+    CONTROL         "Mini Dump",IDC_MINI_DUMP,"Button",BS_AUTORADIOBUTTON, 20, 70, 80, 15
+    DEFPUSHBUTTON   "Debugger", ID_DEBUGGER, 10, 105, 50, 14
+    DEFPUSHBUTTON   "Cancel", IDCANCEL, 140, 105, 50, 14
+    // 置于最后，确保按下Enter时默认等同于按下Create Dump
+    DEFPUSHBUTTON   "Create Dump", IDOK, 75, 105, 60, 14
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TEXT_TITLE "%s has stopped working"
+    IDS_TEXT_CMDLINE "PID of %s: %lu"
+END
+
+2 ICON "res\\werfault.ico"
+1 24 "res\\werfault_exe.manifest"
