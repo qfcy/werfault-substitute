@@ -7,7 +7,7 @@ void *operator new(size_t size){
 	if(size==0)size=1;
 	void *result=malloc(size);
 	if(result==nullptr){
-		MessageBoxA(nullptr, "operator new: Cannot allocator memory!","Error",MB_ICONERROR);
+		MessageBoxA(nullptr, "operator new: Cannot allocate memory!","Error",MB_ICONERROR);
         ExitProcess(1);
     }
 	return result;
